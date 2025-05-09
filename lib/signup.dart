@@ -1,0 +1,156 @@
+import 'package:car_service/textfield.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class signupscreen extends StatefulWidget {
+  const signupscreen({super.key});
+
+  @override
+  State<signupscreen> createState() => _signupscreenState();
+}
+
+class _signupscreenState extends State<signupscreen> {
+  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController cpasswordController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "PERSONAL DETAILS",
+              style: GoogleFonts.jockeyOne(
+                color: Colors.amberAccent,
+                fontSize: 40,
+              ),
+            ),
+            SizedBox(height: 30),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "USER NAME",
+                  style: GoogleFonts.jockeyOne(
+                    color: Colors.amberAccent,
+                    fontSize: 20,
+                  ),
+                ),
+                textfield(
+                  reusetexteditincontroller: usernameController,
+                  password: false,
+                ),
+              ],
+            ),
+
+            SizedBox(height: 20),
+
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "EMAIL",
+                  style: GoogleFonts.jockeyOne(
+                    color: Colors.amberAccent,
+                    fontSize: 20,
+                  ),
+                ),
+                textfield(
+                  reusetexteditincontroller: emailController,
+                  password: false,
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "PASSWORD",
+                  style: GoogleFonts.jockeyOne(
+                    color: Colors.amberAccent,
+                    fontSize: 20,
+                  ),
+                ),
+                textfield(
+                  reusetexteditincontroller: passwordController,
+                  password: true,
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "CONFIRM PASSWORD",
+                  style: GoogleFonts.jockeyOne(
+                    color: Colors.amberAccent,
+                    fontSize: 20,
+                  ),
+                ),
+                textfield(
+                  reusetexteditincontroller: cpasswordController,
+                  password: false,
+                ),
+              ],
+            ),
+
+            SizedBox(height: 20),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "PHONE NUMBER",
+                  style: GoogleFonts.jockeyOne(
+                    color: Colors.amberAccent,
+                    fontSize: 20,
+                  ),
+                ),
+                textfield(
+                  reusetexteditincontroller: phoneController,
+                  password: false,
+                ),
+              ],
+            ),
+
+            SizedBox(height: 40),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.amber,
+
+                minimumSize: Size(30, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                elevation: 2,
+              ),
+              child: Text(
+                "Register",
+                style: GoogleFonts.jockeyOne(color: Colors.black, fontSize: 40),
+              ),
+            ),
+
+            SizedBox(height: 20),
+
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/login');
+              },
+              child: Text(
+                "LOGIN",
+                style: GoogleFonts.jockeyOne(color: Colors.amber, fontSize: 20),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

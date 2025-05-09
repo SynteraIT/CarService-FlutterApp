@@ -1,4 +1,5 @@
 import 'package:car_service/loginscreen.dart';
+import 'package:car_service/signup.dart';
 import 'package:flutter/material.dart';
 import 'splashscreen.dart';
 
@@ -13,7 +14,10 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      routes: {'/login': (context) => Loginscreen()},
+      routes: {
+        '/login': (context) => Loginscreen(),
+        '/signup': (context) => signupscreen(),
+      },
       home: const Splashscreen(),
     );
   }

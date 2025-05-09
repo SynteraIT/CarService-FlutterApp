@@ -76,7 +76,9 @@ class _LoginscreenState extends State<Loginscreen> {
             SizedBox(height: 20),
 
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/signup');
+              },
               child: Text(
                 "CREATE NEW",
                 style: GoogleFonts.jockeyOne(color: Colors.amber, fontSize: 20),

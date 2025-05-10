@@ -18,6 +18,7 @@ class AuthService {
     } catch (e) {
       log("account create failed");
     }
+    return null;
   }
 
   Future<User?> logWithEmailAndPassword(String email, String password) async {
@@ -31,6 +32,7 @@ class AuthService {
     } catch (e) {
       log("user login failed");
     }
+    return null;
   }
 
   Future<void> signOut() async {

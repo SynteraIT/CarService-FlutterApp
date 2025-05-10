@@ -15,7 +15,7 @@ class textfield extends StatefulWidget {
 }
 
 class _textfieldState extends State<textfield> {
-  bool _obscureText = true;
+  final bool _obscureText = true;
 
   @override
   Widget build(BuildContext context) {

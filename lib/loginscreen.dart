@@ -57,7 +57,9 @@ class _LoginscreenState extends State<Loginscreen> {
             ),
             SizedBox(height: 40),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/nav');
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.amber,
 

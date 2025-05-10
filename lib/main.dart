@@ -1,4 +1,10 @@
+import 'package:car_service/screens/booking.dart';
+import 'package:car_service/screens/home.dart';
 import 'package:car_service/loginscreen.dart';
+import 'package:car_service/navigation.dart';
+import 'package:car_service/screens/makeappointment.dart';
+import 'package:car_service/screens/mechanic.dart';
+import 'package:car_service/screens/typeofservices.dart';
 import 'package:car_service/signup.dart';
 import 'package:flutter/material.dart';
 import 'splashscreen.dart';
@@ -17,6 +23,12 @@ class MainApp extends StatelessWidget {
       routes: {
         '/login': (context) => Loginscreen(),
         '/signup': (context) => signupscreen(),
+        '/home': (context) => Home(),
+        '/nav': (context) => Navigationpages(),
+        '/booking': (context) => Booking(),
+        '/typeofservices': (context) => typeofservices(),
+        '/makeappointment': (context) => makeappointment(),
+        '/mechanic': (context) => mechanic(),
       },
       home: const Splashscreen(),
     );

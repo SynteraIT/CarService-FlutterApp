@@ -22,7 +22,7 @@ class mechanic extends StatelessWidget {
             SizedBox(height: 10),
             InkWell(
               onTap: () {
-                detail.setmechanic("Mechanic 1");
+                detail.setmechanic("MECHANIC 1 (John)");
                 Navigator.pushNamed(context, '/confirmbooking');
               },
               child: Container(
@@ -39,7 +39,7 @@ class mechanic extends StatelessWidget {
                     Icon(Icons.people, color: Colors.amber, size: 40),
                     SizedBox(width: 10),
                     Text(
-                      "MECHANIC 1",
+                      "MECHANIC 1 (John)",
                       style: GoogleFonts.jockeyOne(
                         color: Colors.amber,
                         fontSize: 30,
@@ -53,7 +53,7 @@ class mechanic extends StatelessWidget {
             SizedBox(height: 10),
             InkWell(
               onTap: () {
-                detail.setmechanic("Mechanic 2");
+                detail.setmechanic("MECHANIC 2 (Tim)");
                 Navigator.pushNamed(context, '/confirmbooking');
               },
               child: Container(
@@ -70,7 +70,7 @@ class mechanic extends StatelessWidget {
                     Icon(Icons.people, color: Colors.amber, size: 40),
                     SizedBox(width: 10),
                     Text(
-                      "MECHANIC 2",
+                      "MECHANIC 2 (Tim)",
                       style: GoogleFonts.jockeyOne(
                         color: Colors.amber,
                         fontSize: 30,
@@ -84,7 +84,7 @@ class mechanic extends StatelessWidget {
             SizedBox(height: 10),
             InkWell(
               onTap: () {
-                detail.setmechanic("Mechanic 3");
+                detail.setmechanic("MECHANIC 3 (Rocky)");
                 Navigator.pushNamed(context, '/confirmbooking');
               },
               child: Container(
@@ -101,7 +101,69 @@ class mechanic extends StatelessWidget {
                     Icon(Icons.people, color: Colors.amber, size: 40),
                     SizedBox(width: 10),
                     Text(
-                      "MECHANIC 3",
+                      "MECHANIC 3 (Rocky)",
+                      style: GoogleFonts.jockeyOne(
+                        color: Colors.amber,
+                        fontSize: 30,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            SizedBox(height: 10),
+            InkWell(
+              onTap: () {
+                detail.setmechanic("MECHANIC 4 (Lazzy)");
+                Navigator.pushNamed(context, '/confirmbooking');
+              },
+              child: Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  border: Border.all(color: const Color.fromARGB(94, 0, 0, 0)),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                width: width * 0.95,
+                height: 80,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Icon(Icons.people, color: Colors.amber, size: 40),
+                    SizedBox(width: 10),
+                    Text(
+                      "MECHANIC 4 (Lazzy)",
+                      style: GoogleFonts.jockeyOne(
+                        color: Colors.amber,
+                        fontSize: 30,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            SizedBox(height: 10),
+            InkWell(
+              onTap: () {
+                detail.setmechanic("MECHANIC 5 (Wikz)");
+                Navigator.pushNamed(context, '/confirmbooking');
+              },
+              child: Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  border: Border.all(color: const Color.fromARGB(94, 0, 0, 0)),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                width: width * 0.95,
+                height: 80,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Icon(Icons.people, color: Colors.amber, size: 40),
+                    SizedBox(width: 10),
+                    Text(
+                      "MECHANIC 5 (Wikz)",
                       style: GoogleFonts.jockeyOne(
                         color: Colors.amber,
                         fontSize: 30,

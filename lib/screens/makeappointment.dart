@@ -52,7 +52,6 @@ class _makeappointmentState extends State<makeappointment> {
                     setState(() {
                       selectedDate = dateTime;
                       detail.setdatetime(selectedDate);
-                      print(detail.getdatetime());
                     });
                   }
                 },

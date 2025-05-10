@@ -36,7 +36,7 @@ class MainApp extends StatelessWidget {
         '/mechanic': (context) => mechanic(),
         '/confirmbooking': (context) => confirmbooking(),
       },
-      home: const Booking(),
+      home: const Splashscreen(),
     );
   }
 }

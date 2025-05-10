@@ -47,7 +47,7 @@ class confirmbooking extends StatelessWidget {
                         color: Colors.amber,
                       ),
                       Text(
-                        "MR. Name",
+                        detail.mechanic.toString(),
                         style: GoogleFonts.jockeyOne(
                           color: Colors.black,
                           fontSize: 25,
@@ -64,9 +64,11 @@ class confirmbooking extends StatelessWidget {
 
                       Row(
                         children: [
-                          Icon(Icons.star, size: 40, color: Colors.amber),
-                          Icon(Icons.star, size: 40, color: Colors.amber),
-                          Icon(Icons.star, size: 40, color: Colors.amber),
+                          Icon(Icons.star, size: 18, color: Colors.amber),
+                          Icon(Icons.star, size: 18, color: Colors.amber),
+                          Icon(Icons.star, size: 18, color: Colors.amber),
+                          Icon(Icons.star, size: 18, color: Colors.amber),
+                          Icon(Icons.star, size: 18, color: Colors.amber),
                         ],
                       ),
                     ],

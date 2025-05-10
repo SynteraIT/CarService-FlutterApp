@@ -1,3 +1,4 @@
+import 'package:car_service/detail.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -69,6 +70,164 @@ class confirmbooking extends StatelessWidget {
                         ],
                       ),
                     ],
+                  ),
+                  Divider(
+                    color: Colors.grey,
+                    thickness: 1,
+                    indent: 6, // left space
+                    endIndent: 10, // right space
+                  ),
+
+                  Text(
+                    "BOOKING SUMMARY",
+                    style: GoogleFonts.jockeyOne(
+                      color: Colors.black,
+                      fontSize: 25,
+                    ),
+                  ),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "SERVICE TYPE",
+                        style: GoogleFonts.jockeyOne(
+                          color: const Color.fromARGB(255, 97, 92, 92),
+                          fontSize: 20,
+                        ),
+                      ),
+                      Text(
+                        detail.typeofservice.toString(),
+                        style: GoogleFonts.jockeyOne(
+                          color: const Color.fromARGB(255, 97, 92, 92),
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "CREATE DATE",
+                        style: GoogleFonts.jockeyOne(
+                          color: const Color.fromARGB(255, 97, 92, 92),
+                          fontSize: 20,
+                        ),
+                      ),
+                      Text(
+                        detail.dateTime.toString().split(' ')[0],
+                        style: GoogleFonts.jockeyOne(
+                          color: const Color.fromARGB(255, 97, 92, 92),
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "SERVICE TYPE",
+                        style: GoogleFonts.jockeyOne(
+                          color: const Color.fromARGB(255, 97, 92, 92),
+                          fontSize: 20,
+                        ),
+                      ),
+                      Text(
+                        detail.timeslot.toString(),
+                        style: GoogleFonts.jockeyOne(
+                          color: const Color.fromARGB(255, 97, 92, 92),
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "SERVICE TYPE",
+                        style: GoogleFonts.jockeyOne(
+                          color: const Color.fromARGB(255, 97, 92, 92),
+                          fontSize: 20,
+                        ),
+                      ),
+                      Text(
+                        detail.vehicle.toString(),
+                        style: GoogleFonts.jockeyOne(
+                          color: const Color.fromARGB(255, 97, 92, 92),
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "COST",
+                        style: GoogleFonts.jockeyOne(
+                          color: const Color.fromARGB(255, 97, 92, 92),
+                          fontSize: 20,
+                        ),
+                      ),
+                      Text(
+                        "RS. 15000",
+                        style: GoogleFonts.jockeyOne(
+                          color: const Color.fromARGB(255, 97, 92, 92),
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "NOTE",
+                        style: GoogleFonts.jockeyOne(
+                          color: const Color.fromARGB(255, 97, 92, 92),
+                          fontSize: 20,
+                        ),
+                      ),
+                      Text(
+                        "_________________________________",
+                        style: GoogleFonts.jockeyOne(
+                          color: const Color.fromARGB(255, 97, 92, 92),
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: width * 0.05),
+                  Center(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, '/nav');
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.amber,
+
+                        minimumSize: Size(30, 50),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        elevation: 2,
+                      ),
+                      child: Text(
+                        "CONFIRM",
+                        style: GoogleFonts.jockeyOne(
+                          color: Colors.black,
+                          fontSize: 25,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),

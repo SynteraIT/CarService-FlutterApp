@@ -3,7 +3,6 @@ Detail detail = Detail();
 class Detail {
   String? typeofservice;
   DateTime? dateTime;
-  String? appointmentdate;
   String? vehicle;
   String? timeslot;
   String? mechanic;
@@ -16,12 +15,12 @@ class Detail {
     return vehicle;
   }
 
-  settypeofservice(String vehicle) {
-    this.vehicle = vehicle;
+  settypeofservice(String typeofservice) {
+    this.typeofservice = typeofservice;
   }
 
   gettypeofservice() {
-    return vehicle;
+    return typeofservice;
   }
 
   setdatetime(DateTime dateTime) {

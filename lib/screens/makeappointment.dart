@@ -1,3 +1,4 @@
+import 'package:car_service/detail.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -36,11 +37,22 @@ class _makeappointmentState extends State<makeappointment> {
                     context: context,
                     firstDate: DateTime(2000),
                     lastDate: DateTime(3000),
+                    builder:
+                        (context, child) => Theme(
+                          data: ThemeData.light().copyWith(
+                            colorScheme: ColorScheme.light(
+                              primary: Colors.amber,
+                            ),
+                          ),
+                          child: child!,
+                        ),
                   );
 
                   if (dateTime != null) {
                     setState(() {
                       selectedDate = dateTime;
+                      detail.setdatetime(selectedDate);
+                      print(detail.getdatetime());
                     });
                   }
                 },
@@ -69,7 +81,10 @@ class _makeappointmentState extends State<makeappointment> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    detail.settimeslot("9 - 10");
+                    Navigator.pushNamed(context, '/mechanic');
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
 
@@ -88,7 +103,10 @@ class _makeappointmentState extends State<makeappointment> {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    detail.settimeslot("10- 11");
+                    Navigator.pushNamed(context, '/mechanic');
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
 
@@ -107,7 +125,10 @@ class _makeappointmentState extends State<makeappointment> {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    detail.settimeslot("11- 12");
+                    Navigator.pushNamed(context, '/mechanic');
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
 
@@ -132,7 +153,10 @@ class _makeappointmentState extends State<makeappointment> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    detail.settimeslot("12- 13");
+                    Navigator.pushNamed(context, '/mechanic');
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
 
@@ -151,7 +175,10 @@ class _makeappointmentState extends State<makeappointment> {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    detail.settimeslot("13- 14");
+                    Navigator.pushNamed(context, '/mechanic');
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
 
@@ -170,7 +197,10 @@ class _makeappointmentState extends State<makeappointment> {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    detail.settimeslot("15- 16");
+                    Navigator.pushNamed(context, '/mechanic');
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
 
@@ -196,7 +226,10 @@ class _makeappointmentState extends State<makeappointment> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    detail.settimeslot("16- 17");
+                    Navigator.pushNamed(context, '/mechanic');
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
 
@@ -215,7 +248,10 @@ class _makeappointmentState extends State<makeappointment> {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    detail.settimeslot("17- 18");
+                    Navigator.pushNamed(context, '/mechanic');
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
 
@@ -235,6 +271,7 @@ class _makeappointmentState extends State<makeappointment> {
                 ),
                 ElevatedButton(
                   onPressed: () {
+                    detail.settimeslot("18- 19");
                     Navigator.pushNamed(context, '/mechanic');
                   },
                   style: ElevatedButton.styleFrom(

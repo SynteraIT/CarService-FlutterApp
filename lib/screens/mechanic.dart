@@ -1,3 +1,4 @@
+import 'package:car_service/detail.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,7 +21,10 @@ class mechanic extends StatelessWidget {
           children: [
             SizedBox(height: 10),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                detail.setmechanic("Mechanic 1");
+                Navigator.pushNamed(context, '/confirmbooking');
+              },
               child: Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
@@ -48,7 +52,10 @@ class mechanic extends StatelessWidget {
 
             SizedBox(height: 10),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                detail.setmechanic("Mechanic 2");
+                Navigator.pushNamed(context, '/confirmbooking');
+              },
               child: Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
@@ -76,7 +83,10 @@ class mechanic extends StatelessWidget {
 
             SizedBox(height: 10),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                detail.setmechanic("Mechanic 3");
+                Navigator.pushNamed(context, '/confirmbooking');
+              },
               child: Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(

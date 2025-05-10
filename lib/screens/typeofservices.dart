@@ -1,3 +1,4 @@
+import 'package:car_service/detail.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -42,7 +43,10 @@ class typeofservices extends StatelessWidget {
                         ),
                       ),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          detail.settypeofservice("Oil Changes");
+                          Navigator.pushNamed(context, '/makeappointment');
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.amber,
 
@@ -87,6 +91,7 @@ class typeofservices extends StatelessWidget {
                       ),
                       ElevatedButton(
                         onPressed: () {
+                          detail.settypeofservice("Battery Changes");
                           Navigator.pushNamed(context, '/makeappointment');
                         },
                         style: ElevatedButton.styleFrom(

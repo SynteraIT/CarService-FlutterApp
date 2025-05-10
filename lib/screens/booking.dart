@@ -43,8 +43,8 @@ class Booking extends StatelessWidget {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          setselectcar("sedans");
-                          print(Detail().vehicle);
+                          detail.setVehicle("Sedan");
+                          Navigator.pushNamed(context, '/typeofservices');
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.amber,
@@ -89,7 +89,8 @@ class Booking extends StatelessWidget {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          print(Detail().vehicle);
+                          detail.setVehicle("SUV");
+                          Navigator.pushNamed(context, '/typeofservices');
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.amber,
@@ -134,6 +135,7 @@ class Booking extends StatelessWidget {
                       ),
                       ElevatedButton(
                         onPressed: () {
+                          detail.setVehicle("Crossovers");
                           Navigator.pushNamed(context, '/typeofservices');
                         },
                         style: ElevatedButton.styleFrom(
@@ -162,9 +164,5 @@ class Booking extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  setselectcar(String car) {
-    detail.vehicle = car;
   }
 }

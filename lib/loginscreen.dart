@@ -1,3 +1,4 @@
+import 'package:car_service/auth/auth.dart';
 import 'package:car_service/textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,6 +13,14 @@ class Loginscreen extends StatefulWidget {
 class _LoginscreenState extends State<Loginscreen> {
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    super.dispose();
+    usernameController.dispose();
+    passwordController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +67,7 @@ class _LoginscreenState extends State<Loginscreen> {
             SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/nav');
+                _login();
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.amber,
@@ -90,5 +99,16 @@ class _LoginscreenState extends State<Loginscreen> {
         ),
       ),
     );
+  }
+
+  Future<void> _login() async {
+    final user = await AuthService().logWithEmailAndPassword(
+      usernameController.text,
+      passwordController.text,
+    );
+
+    if (user != null) {
+      Navigator.pushReplacementNamed(context, '/nav');
+    }
   }
 }

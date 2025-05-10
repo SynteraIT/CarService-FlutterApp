@@ -1,3 +1,4 @@
+import 'package:car_service/auth/auth.dart';
 import 'package:car_service/textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -121,7 +122,9 @@ class _signupscreenState extends State<signupscreen> {
 
             SizedBox(height: 40),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                _signup();
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.amber,
 
@@ -152,5 +155,26 @@ class _signupscreenState extends State<signupscreen> {
         ),
       ),
     );
+  }
+
+  Future<void> _signup() async {
+    // Validate passwords match
+    if (passwordController.text != cpasswordController.text) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('Passwords do not match')));
+      return;
+    }
+
+    final user = await AuthService().createUserWithEmaiAndPassword(
+      usernameController.text,
+      emailController.text,
+      passwordController.text,
+      phoneController.text,
+    );
+
+    if (user != null) {
+      Navigator.pushReplacementNamed(context, '/nav');
+    }
   }
 }

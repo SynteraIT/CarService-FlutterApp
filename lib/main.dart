@@ -1,3 +1,4 @@
+import 'package:car_service/firebase_options.dart';
 import 'package:car_service/screens/booking.dart';
 import 'package:car_service/screens/confirmbooking.dart';
 import 'package:car_service/screens/home.dart';
@@ -8,9 +9,12 @@ import 'package:car_service/screens/mechanic.dart';
 import 'package:car_service/screens/typeofservices.dart';
 import 'package:car_service/signup.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'splashscreen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MainApp());
 }
 
@@ -32,7 +36,7 @@ class MainApp extends StatelessWidget {
         '/mechanic': (context) => mechanic(),
         '/confirmbooking': (context) => confirmbooking(),
       },
-      home: const Splashscreen(),
+      home: const Booking(),
     );
   }
 }

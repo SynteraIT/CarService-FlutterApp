@@ -93,17 +93,22 @@ class confirmbooking extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "SERVICE TYPE",
+                        "SERVICE TYPE                 ",
                         style: GoogleFonts.jockeyOne(
                           color: const Color.fromARGB(255, 97, 92, 92),
                           fontSize: 20,
                         ),
                       ),
-                      Text(
-                        detail.typeofservice.toString(),
-                        style: GoogleFonts.jockeyOne(
-                          color: const Color.fromARGB(255, 97, 92, 92),
-                          fontSize: 20,
+                      Flexible(
+                        child: Text(
+                          detail.typeofservice.toString(),
+                          style: GoogleFonts.jockeyOne(
+                            color: const Color.fromARGB(255, 97, 92, 92),
+                            fontSize: 20,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                          softWrap: false,
                         ),
                       ),
                     ],

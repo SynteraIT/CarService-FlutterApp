@@ -31,28 +31,28 @@ class contactus extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "EMAIL",
+                    "EMAIL -   cars@gmail.com",
                     style: GoogleFonts.jockeyOne(
                       color: Colors.black,
                       fontSize: 30,
                     ),
                   ),
                   Text(
-                    "MOBILE NUMBER",
+                    "MOBILE NUMBER -   077 896 3333",
                     style: GoogleFonts.jockeyOne(
                       color: Colors.black,
                       fontSize: 30,
                     ),
                   ),
                   Text(
-                    "LAND NUMBER",
+                    "LAND NUMBER -   011 255 3698",
                     style: GoogleFonts.jockeyOne(
                       color: Colors.black,
                       fontSize: 30,
                     ),
                   ),
                   Text(
-                    "ADDRESS",
+                    "ADDRESS -   JA ELA",
                     style: GoogleFonts.jockeyOne(
                       color: Colors.black,
                       fontSize: 30,

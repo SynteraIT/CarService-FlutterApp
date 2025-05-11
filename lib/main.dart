@@ -1,6 +1,7 @@
 import 'package:car_service/firebase_options.dart';
 import 'package:car_service/screens/booking.dart';
 import 'package:car_service/screens/confirmbooking.dart';
+import 'package:car_service/screens/contactus.dart';
 import 'package:car_service/screens/home.dart';
 import 'package:car_service/loginscreen.dart';
 import 'package:car_service/navigation.dart';
@@ -37,6 +38,7 @@ class MainApp extends StatelessWidget {
         '/mechanic': (context) => mechanic(),
         '/confirmbooking': (context) => confirmbooking(),
         '/profile': (context) => profile(),
+        '/contact': (context) => contactus(),
       },
       home: const Splashscreen(),
     );

@@ -34,6 +34,44 @@ class profile extends StatelessWidget {
           "PROFILE INFORMATION",
           style: GoogleFonts.jockeyOne(color: Colors.black, fontSize: 30),
         ),
+        leading: Builder(
+          builder:
+              (context) => IconButton(
+                icon: Icon(Icons.menu),
+                onPressed: () => Scaffold.of(context).openDrawer(),
+              ),
+        ),
+      ),
+
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(color: Colors.blue),
+              child: Text(
+                'Side Menu',
+                style: TextStyle(color: Colors.white, fontSize: 24),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Home'),
+              onTap: () {
+                // Handle tap
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+              onTap: () {
+                // Handle tap
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
       ),
 
       body: FutureBuilder<Map<String, dynamic>?>(

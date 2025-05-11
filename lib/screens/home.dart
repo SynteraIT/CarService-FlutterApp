@@ -70,7 +70,9 @@ class Home extends StatelessWidget {
               children: [
                 Image(image: AssetImage("./assets/contactus.png")),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/contact');
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
 

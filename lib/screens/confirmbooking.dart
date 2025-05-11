@@ -1,4 +1,5 @@
 import 'package:car_service/detail.dart';
+import 'package:car_service/firebasefunction.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -132,7 +133,7 @@ class confirmbooking extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "SERVICE TYPE",
+                        "TIME SLOT",
                         style: GoogleFonts.jockeyOne(
                           color: const Color.fromARGB(255, 97, 92, 92),
                           fontSize: 20,
@@ -211,7 +212,61 @@ class confirmbooking extends StatelessWidget {
                   Center(
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.pushReplacementNamed(context, '/nav');
+                        showDialog(
+                          context: context,
+                          builder:
+                              (context) => AlertDialog(
+                                backgroundColor: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                title: Text(
+                                  "Confirm Booking",
+                                  style: GoogleFonts.jockeyOne(
+                                    color: Colors.amber,
+                                    fontSize: 22,
+                                  ),
+                                ),
+                                content: Text(
+                                  "Are you sure you want to confirm and proceed?",
+                                  style: GoogleFonts.jockeyOne(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(
+                                        context,
+                                      ).pop(); // Dismiss the alert
+                                      Storefunction().storedata(
+                                        detail.mechanic.toString(),
+                                        detail.typeofservice.toString(),
+                                        detail.dateTime.toString().split(
+                                          ' ',
+                                        )[0],
+                                        detail.timeslot.toString(),
+                                        detail.vehicle.toString(),
+                                        "Rs. 15000",
+                                      );
+
+                                      Navigator.pushReplacementNamed(
+                                        context,
+                                        '/nav',
+                                      );
+                                    },
+                                    child: Text(
+                                      "OK",
+                                      style: GoogleFonts.jockeyOne(
+                                        color: Colors.grey[800],
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.amber,

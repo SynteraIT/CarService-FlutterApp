@@ -15,7 +15,54 @@ class contactus extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: Column(children: [Padding(padding: const EdgeInsets.all(12.0))]),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              width: double.infinity,
+              child: Image(
+                image: AssetImage("./assets/map2.png"),
+                fit: BoxFit.fitWidth,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "EMAIL",
+                    style: GoogleFonts.jockeyOne(
+                      color: Colors.black,
+                      fontSize: 30,
+                    ),
+                  ),
+                  Text(
+                    "MOBILE NUMBER",
+                    style: GoogleFonts.jockeyOne(
+                      color: Colors.black,
+                      fontSize: 30,
+                    ),
+                  ),
+                  Text(
+                    "LAND NUMBER",
+                    style: GoogleFonts.jockeyOne(
+                      color: Colors.black,
+                      fontSize: 30,
+                    ),
+                  ),
+                  Text(
+                    "ADDRESS",
+                    style: GoogleFonts.jockeyOne(
+                      color: Colors.black,
+                      fontSize: 30,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -34,7 +34,7 @@ class _LoginscreenState extends State<Loginscreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "USER NAME",
+                  "EMAIL",
                   style: GoogleFonts.jockeyOne(
                     color: Colors.amberAccent,
                     fontSize: 20,
@@ -108,7 +108,40 @@ class _LoginscreenState extends State<Loginscreen> {
     );
 
     if (user != null) {
-      Navigator.pushReplacementNamed(context, '/nav');
+      showDialog(
+        context: context,
+        builder:
+            (context) => AlertDialog(
+              backgroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              title: Text(
+                "ACCOUNT STATUS",
+                style: GoogleFonts.jockeyOne(color: Colors.amber, fontSize: 22),
+              ),
+              content: Text(
+                "LOGGING SUCCESSFUL",
+                style: GoogleFonts.jockeyOne(color: Colors.black, fontSize: 18),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop(); // Dismiss the alert
+
+                    Navigator.pushReplacementNamed(context, '/nav');
+                  },
+                  child: Text(
+                    "OK",
+                    style: GoogleFonts.jockeyOne(
+                      color: Colors.grey[800],
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+      );
     }
   }
 }

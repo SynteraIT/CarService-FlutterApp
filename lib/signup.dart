@@ -98,7 +98,7 @@ class _signupscreenState extends State<signupscreen> {
                   ),
                   textfield(
                     reusetexteditincontroller: cpasswordController,
-                    password: false,
+                    password: true,
                   ),
                 ],
               ),
@@ -182,7 +182,40 @@ class _signupscreenState extends State<signupscreen> {
     );
 
     if (user != null) {
-      Navigator.pushReplacementNamed(context, '/nav');
+      showDialog(
+        context: context,
+        builder:
+            (context) => AlertDialog(
+              backgroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              title: Text(
+                "ACCOUNT STATUS",
+                style: GoogleFonts.jockeyOne(color: Colors.amber, fontSize: 22),
+              ),
+              content: Text(
+                "ACCOUNT SUCCESSFULLY CREATED",
+                style: GoogleFonts.jockeyOne(color: Colors.black, fontSize: 18),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop(); // Dismiss the alert
+
+                    Navigator.pushReplacementNamed(context, '/login');
+                  },
+                  child: Text(
+                    "OK",
+                    style: GoogleFonts.jockeyOne(
+                      color: Colors.grey[800],
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+      );
     }
   }
 }

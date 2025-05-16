@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:car_service/auth/auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -20,7 +22,7 @@ class History extends StatelessWidget {
 
       return querySnapshot.docs.map((doc) => doc.data()).toList();
     } catch (e) {
-      print("Error fetching service data: $e");
+      log("Error fetching service data: $e");
       return [];
     }
   }

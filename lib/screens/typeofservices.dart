@@ -31,7 +31,6 @@ class _typeofservicesState extends State<typeofservices> {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
     final filteredServices =
         services
             .where(

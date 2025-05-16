@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:car_service/auth/auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +21,7 @@ class profile extends StatelessWidget {
         return userDoc.data();
       }
     } catch (e) {
-      print("Error fetching user data: $e");
+      log("Error fetching user data: $e");
     }
     return null;
   }

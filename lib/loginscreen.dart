@@ -28,8 +28,8 @@ class _LoginscreenState extends State<Loginscreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Image(image: AssetImage("./assets/profile.png")),
-            SizedBox(height: 80),
+            const Image(image: AssetImage("./assets/carlogo.png")),
+            SizedBox(height: 20),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
